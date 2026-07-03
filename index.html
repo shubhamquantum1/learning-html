@@ -1,3 +1,16 @@
+<!-- Level 2 — Topic 3: Structural Grouping (<div> and <span>) -->
+<!-- ----------------------------------------- -->
+<!--📦 HTML Structural Grouping (<div> & <span>)
+    🧱 Element Types
+    Block-level: Starts on a new line; spans full page width (e.g., <h1>, <p>, <ul>, <li>).
+    Inline: Sits inside existing text; takes up minimal content space (e.g., <strong>, <a>, <img>).
+    
+    📂 Grouping Containers
+    <div> (Division): Think of a <div> as an invisible, structural box. We use it to wrap a group of related elements (like a header, a sidebar, or a card) so we can style them as one single unit using CSS later.
+    <span>: A <span> is used to wrap a small section of text inside a paragraph or heading. Since it's inline, it doesn't break the text flow. It's useful when you want to highlight, color, or style just one specific word or phrase.
+    Core Rule: Both tags are purely structural and cause no visual changes in the browser without CSS. -->
+
+
 <!-- Mandatory declaration that tells browser that this is a modern HTML5 document -->
 <!DOCTYPE html>   
 
@@ -13,14 +26,17 @@
     <body>
         <h1> Welcome to My Coding Journey </h1>
             <h2> Chapter 1: The Basics </h2>
-                <p> HTML is the <strong>backbone</strong> of any <em>webpage</em>.<br></p>
+
+                <p> <span>HTML is the <strong>backbone</strong></span> of any <em>webpage</em>.<br></p>
                     <ul>
                         <li>It is used to structure the content of a webpage.</li>
                         <li>It provides structure and semantics (meaning) to the page content.</li>
                     </ul>
                 
-                <a href="https://www.google.com" target="_blank"> Absolute link: Go to Google</a>
-                <br>
-                <a href="projects/recipe.html"> Relative link: Check out my recipe</a>
+                <div>    
+                    <a href="https://www.google.com" target="_blank"> Absolute link: Go to Google</a>
+                    <br>
+                    <a href="projects/recipe.html"> Relative link: Check out my recipe</a>
+                </div>
     </body>
 </html>
