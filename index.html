@@ -1,14 +1,20 @@
-<!-- Level 2 — Topic 3: Structural Grouping (<div> and <span>) -->
+<!-- Level 2 — Topic 4: HTML5 Semantic Elements -->
 <!-- ----------------------------------------- -->
-<!--📦 HTML Structural Grouping (<div> & <span>)
-    🧱 Element Types
-    Block-level: Starts on a new line; spans full page width (e.g., <h1>, <p>, <ul>, <li>).
-    Inline: Sits inside existing text; takes up minimal content space (e.g., <strong>, <a>, <img>).
-    
-    📂 Grouping Containers
-    <div> (Division): Think of a <div> as an invisible, structural box. We use it to wrap a group of related elements (like a header, a sidebar, or a card) so we can style them as one single unit using CSS later.
-    <span>: A <span> is used to wrap a small section of text inside a paragraph or heading. Since it's inline, it doesn't break the text flow. It's useful when you want to highlight, color, or style just one specific word or phrase.
-    Core Rule: Both tags are purely structural and cause no visual changes in the browser without CSS. -->
+<!--📦 HTML Semantic Elements
+    🧱 Purpose:
+    HTML5 introduced semantic elements to provide clearer structure and meaning to web page content.
+    Unlike <div> and <span>, semantic tags have built-in meaning and improve SEO and accessibility.
+
+    🧱 Key Semantic Tags:
+    <header> - Wraps the introductory content at the top of the page (e.g., the website logo, main title, or slogan).
+    <nav> -  Wraps navigation links (e.g., the menu bar).
+    <main> - Wraps the primary, unique content of the page. You should only have one <main> tag per HTML document.
+    <article> - Represents a self-contained piece of content that can exist independently of the rest of the page (e.g., a blog post, a news article, or a product card).
+    <section> - Groups related content together inside the page (like a chapter in a book, e.g., an "About Me" section or a "Hobbies" section).
+    <aside> - Represents content that is related to the main page but can be considered separate from it (like a sidebar, a pull quote, or an advertisement).
+    <footer> - Groups footer content (copyright, contact info, sitemap).
+    <figure> and <figcaption> - Used together to wrap images, diagrams, or code snippets with a caption. -->
+<!-- ------------------------------------------------------------------------------------- -->
 
 
 <!-- Mandatory declaration that tells browser that this is a modern HTML5 document -->
@@ -24,19 +30,29 @@
 
     <!-- Body. Everything inside is visible to user-->
     <body>
-        <h1> Welcome to My Coding Journey </h1>
-            <h2> Chapter 1: The Basics </h2>
+        <header> 
+            <h1> Welcome to My Coding Journey </h1> 
+        </header>
 
+        <nav>
+            <div>    
+                <a href="https://www.google.com" target="_blank"> Absolute link: Go to Google</a>
+                <br>
+                <a href="projects/recipe.html"> Relative link: Check out my recipe</a>
+            </div>
+        </nav>
+        
+        <main>
+            <h2> Chapter 1: The Basics </h2>
                 <p> <span>HTML is the <strong>backbone</strong></span> of any <em>webpage</em>.<br></p>
                     <ul>
                         <li>It is used to structure the content of a webpage.</li>
                         <li>It provides structure and semantics (meaning) to the page content.</li>
                     </ul>
+        </main>
                 
-                <div>    
-                    <a href="https://www.google.com" target="_blank"> Absolute link: Go to Google</a>
-                    <br>
-                    <a href="projects/recipe.html"> Relative link: Check out my recipe</a>
-                </div>
+        <footer> 
+            &copy; 2026 My Coding Journey. All rights reserved.
+        </footer> 
     </body>
 </html>
