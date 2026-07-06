@@ -1,3 +1,17 @@
+<!-- Level 3 — Topic 1: Tables (<table>) -->
+<!-- ----------------------------------- -->
+<!-- A table is constructed like a grid, row-by-row, using 4 primary tags:
+    <table>: The main wrapper tag.
+    <tr> (Table Row): Every row in your table must be wrapped in this tag.
+    <th> (Table Header): Used for the title cells in the very first row. The browser automatically makes these bold and centered.
+    <td> (Table Data): The standard cells containing your actual data. 
+-->
+<!-- NOTE - <center> is "Deprecated". In modern web development, we keep HTML strictly for structure and use CSS for styling (which includes centering text using text-align: center). -->
+
+
+
+
+    
 <!-- Mandatory declaration that tells browser that this is a modern HTML5 document -->
 <!DOCTYPE html>   
 
@@ -36,6 +50,29 @@
                         <li> Robotics </li>
                     </ul>
             </div>
+
+            <table border="1"> <!-- We use border="1" just so we can see the gridlines without CSS -->
+                <tr>
+                    <th>Day</th>
+                    <th>Subject</th>
+                    <th>Target Hours</th>
+                </tr>
+                <tr>
+                    <td><center>Monday</center></td>
+                    <td><center>IoT</center></td>
+                    <td><center>3</center></td>
+                </tr>
+                <tr>
+                    <td><center>Tuesday</center></td>
+                    <td><center>ML & AI</center></td>
+                    <td><center>4</center></td>
+                </tr>
+                <tr>
+                    <td><center>Wednesday</center></td>
+                    <td><center>Robotics</center></td>
+                    <td><center>3</center></td>
+                </tr>                
+            </table><br>
         </main>
                 
         <footer> 
