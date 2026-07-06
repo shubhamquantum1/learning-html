@@ -1,0 +1,85 @@
+<!-- 📝 HTML Forms & Inputs (Level 3) -->
+<!-- --------------------------------- -->
+<!-- Forms handle user interaction like searches, logins, and contact inputs.
+  Wrapper (<form>) - Encloses all form elements.
+  Input (<input>)  - Self-closing tag & its behavior depends on the type attribute.
+                     text - single-line text entry 
+                     email -Email validation 
+                     password - Masks characters
+  Label (<label>)  - Connects text to inputs using matching for and id tags. Clicking label focuses the cursor inside the tied input field. -->
+
+
+
+<!-- 🧱 Additional Core Elements -->
+<!-- 1. Text Area (<textarea>) — Multi-line input. Unlike <input>, <textarea> has a closing tag. It is used for longer messages or comments.
+    <label for="message">Message:</label>
+    <textarea id="message" rows="4" cols="50"></textarea>
+
+    2. Checkbox (type="checkbox") — Choose multiple. Used for yes/no questions or picking multiple choices from a list.
+    <input type="checkbox" id="subscribe">
+    <label for="subscribe">Subscribe to newsletter</label>
+
+    3. Radio Buttons (type="radio") — Choose only one. Used when a user must select only one option from a group. To group them, they must share the exact same name attribute.
+    <input type="radio" id="male" name="gender">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender">
+    <label for="female">Female</label>
+
+    4. Dropdown Menu (<select> and <option>) - Used to create a select menu of options.
+    <label for="cars">Choose a car:</label>
+    <select id="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+    </select> -->
+
+
+
+<!-- Mandatory declaration that tells browser that this is a modern HTML5 document -->
+<!DOCTYPE html>   
+
+<!-- Root tag. Packs everything on page -->
+<html>
+
+    <!--Invisible to user. Contains metadata, page title and links to CSS-->
+    <head>
+        <title>Contact</title>
+    </head>
+
+    <!-- Body. Everything inside is visible to user-->
+    <body>
+        <header> 
+            <h1> <u> Contact Information </u> </h1> 
+        </header>
+
+        <nav>
+            <div>
+                <a href="portfolio.html"> Home </a>
+                <br>    
+                <a href="about.html"> About Me </a>
+                <br>
+                <a href="hobbies.html"> My Hobbies </a>
+                <br>
+                <a href="contact.html"> Contact </a>                
+            </div>
+        </nav>
+        
+        <main>
+            <h3>form ---------------------------</h3>
+            <form>
+                <label for="name"> Name: </label>
+                <input type="text" id="name">
+                <br>
+                <label for="email"> Email: </label>
+                <input type="email" id="email">
+                <br>
+                <button type="submit"> Send Message </button>
+                <br>
+            </form><br>
+        </main>
+                
+        <footer> 
+            &copy; 2026 My Coding Journey. All rights reserved.
+        </footer> 
+    </body>
+
+</html>
