@@ -1,0 +1,14 @@
+/* Will target body tag of portfolio.html file */
+body {
+  background-color: lightgray;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 12px;
+}
