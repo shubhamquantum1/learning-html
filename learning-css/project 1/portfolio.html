@@ -1,29 +1,21 @@
-<!-- Level 1 — Topic 3: CSS Color Systems (The HSL Secret) -->
+<!-- Level 1 — Topic 4: Typography & Google Fonts -->
 <!-- ----------------------------------- -->
 <!-- 
-    There are three ways to define colors in CSS:
-    1. Names: red, blue, lightgray (very limited).
-    2. Hex Codes: #3b82f6 or #ff0000 (industry standard, but impossible to read or adjust without a color picker).
-    3. HSL (Hue, Saturation, Lightness): The best system for developers. HSL is super intuitive because it behaves like mixing paint.
-    
-    How HSL Works: hsl(Hue, Saturation%, Lightness%)
-    1. Hue (0 - 360): Think of a color wheel.
-        0 is Red
-        120 is Green
-        240 is Blue
-        Any number in between blends them (e.g., 180 is Cyan, 300 is Magenta).
-    2. Saturation (0% - 100%): How rich the color is.
-        0% is completely grayscale (shade of gray).
-        100% is full, vibrant color.
-    3. Lightness (0% - 100%): How bright the color is.
-        0% is pitch black.
-        100% is pure white.
-        50% is the "pure" color balance.
-    
-    Why HSL is a Developer's Superpower:
-    If you want to make a color slightly darker for a button hover effect, you don't need a color picker. You just change the lightness number:
-        Standard Blue: hsl(240, 100%, 50%)
-        Darker Blue: hsl(240, 100%, 40%) (just lowered lightness by 10%!)
+    By default, browsers render text using "Times New Roman," which looks like an outdated newspaper and screams "1995 website." 
+    Modern web design prefers clean sans-serif fonts (fonts without the tiny feet/ticks on the letters).
+    Instead of relying on fonts installed on the user's computer, we can import beautiful, free web fonts directly from Google Fonts.
+
+    1. Importing a Google Font
+        We can import a font at the very top of our style.css file using the @import command. Let's use the premium modern font "Outfit":
+        >> @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+    2. Typography Properties
+        Once imported, we can style our text using these core properties:
+            font-family: Sets the font. We specify fallbacks in case the internet connection fails:
+                        font-family: 'Outfit', sans-serif;
+            font-size: Sets the size. We will use pixels (px) for now.
+            font-weight: Sets boldness. Can be normal, bold, or numbers (e.g. 300 is thin, 400 is normal, 700 is bold).
+            line-height: Controls the space between lines of text. Standard text feels cramped; adding line-height: 1.6; makes paragraphs instantly readable and feel premium.
 -->
 
 <!-- Mandatory declaration that tells browser that this is a modern HTML5 document -->

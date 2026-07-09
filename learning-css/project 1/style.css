@@ -1,20 +1,33 @@
+/* Importing premium modern 'outfit' font via google */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+
+
 /* Targetting tags color using Names, Hex code and HSL(hue, saturation, lightness) */
 body {
   background-color: hsl(220, 15%, 16%);   /*previous it was => background-color: lightgray;*/
+  font-family: 'Outfit', sans-serif;        /*fallback to sans-serif when Outfit font-family failed to load because of poor internet connection;*/
+  line-height: 1.6;
 }
 
 h1 {
   color: hsl(190, 90%, 65%);
   text-align: center;
+  font-size: 36px;
+  font-weight: 700;
 }
 
 h4 {
   color: lightblue;
   text-align: left;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 p {
-  color: hsl(220, 15%, 85%)
+  color: hsl(220, 15%, 85%);
+  font-family: verdana;
+  font-size: 16px;
 }
 
 /* Changed div tag color to soft-light-blue using hex code*/

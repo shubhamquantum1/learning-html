@@ -1,39 +1,40 @@
-<!-- Level 1 — Topic 3: CSS Color Systems (The HSL Secret) -->
+<!-- Level 1 — Topic 4: Typography & Google Fonts -->
 <!-- ----------------------------------- -->
 <!-- 
-    There are three ways to define colors in CSS:
-    1. Names: red, blue, lightgray (very limited).
-    2. Hex Codes: #3b82f6 or #ff0000 (industry standard, but impossible to read or adjust without a color picker).
-    3. HSL (Hue, Saturation, Lightness): The best system for developers. HSL is super intuitive because it behaves like mixing paint.
-    
-    How HSL Works: hsl(Hue, Saturation%, Lightness%)
-    1. Hue (0 - 360): Think of a color wheel.
-        * 0 is Red
-        * 120 is Green
-        * 240 is Blue
-        * Any number in between blends them (e.g., 180 is Cyan, 300 is Magenta).
-    2. Saturation (0% - 100%): How rich the color is.
-        * 0% is completely grayscale (shade of gray).
-        * 100% is full, vibrant color.
-    3. Lightness (0% - 100%): How bright the color is.
-        * 0% is pitch black.
-        * 100% is pure white.
-        * 50% is the "pure" color balance.
-    
-    Why HSL is a Developer's Superpower:
-    If you want to make a color slightly darker for a button hover effect, you don't need a color picker. You just change the lightness number:
-        Standard Blue: hsl(240, 100%, 50%)
-        Darker Blue: hsl(240, 100%, 40%) (just lowered lightness by 10%!)
+    By default, browsers render text using "Times New Roman," which looks like an outdated newspaper and screams "1995 website." 
+    Modern web design prefers clean sans-serif fonts (fonts without the tiny feet/ticks on the letters).
+    Instead of relying on fonts installed on the user's computer, we can import beautiful, free web fonts directly from Google Fonts.
 
+    1. Importing a Google Font
+        We can import a font at the very top of our style.css file using the @import command. Let's use the premium modern font "Outfit":
+        >> @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
 
-    Your Task: Let's transform your portfolio homepage into a modern, sleek dark-themed page using HSL!
-    1. Open your style.css file.
-    2. Replace your color keywords with these curated HSL values:
-        * Body background-color: Set it to a dark slate background: hsl(220, 15%, 16%)
-        * Paragraph text color: We need light text so it is readable on a dark background. Target p and set its color to: hsl(220, 15%, 85%)
-        * Heading 1 and Heading 2 color: Target h1 and h2 and set their color to a vibrant cyan-blue: hsl(190, 90%, 65%)
-        * Navigation links color: Target .nav-link and set color to a soft light blue: hsl(200, 80%, 75%)
-        * Table background-color: Target #study-table and set it to a slightly lighter dark color than the body so it pops: hsl(220, 15%, 22%).
-        * Table text color: Also add color: white; to #study-table so the text inside the table is readable.
-    3. Save and refresh your page!        
+    2. Typography Properties
+        Once imported, we can style our text using these core properties:
+            font-family: Sets the font. We specify fallbacks in case the internet connection fails:
+                        font-family: 'Outfit', sans-serif;
+            font-size: Sets the size. We will use pixels (px) for now.
+            font-weight: Sets boldness. Can be normal, bold, or numbers (e.g. 300 is thin, 400 is normal, 700 is bold).
+            line-height: Controls the space between lines of text. Standard text feels cramped; adding line-height: 1.6; makes paragraphs instantly readable and feel premium.
+
+    Your Task:
+        Let's give your portfolio page a typography upgrade!
+
+        1. Open your style.css file.
+        2. At the very first line of your file (above body), paste the Google Font import:
+                @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+        3. Update your CSS rules:
+            Under body:
+                Set font-family: 'Outfit', sans-serif;
+                Add line-height: 1.6;
+            Under h1:
+                Set font-size: 36px;
+                Set font-weight: 700;
+            Add a new rule for h4:
+                Set font-size: 24px;
+                Set font-weight: 600;
+            Under p:
+                Remove font-family: verdana; (since the body now inherits 'Outfit').
+                Set font-size: 16px;
+            Save and refresh your page!
 -->
