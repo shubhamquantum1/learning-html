@@ -17,11 +17,12 @@ h1 {
   font-weight: 700;
 }
 
-h4 {
+h2 {
   color: lightblue;
   text-align: left;
   font-size: 14px;
   font-weight: 700;
+  text-decoration: underline;
 }
 
 p {
@@ -47,4 +48,30 @@ div{
 #study-table{
   background-color: hsl(220, 15%, 22%);
   color: white;
+}
+
+
+/* Applied specific css to recipe.html file while remaining html is targetted using above existing CSS (i.e.,the dark mode and "Outfit" font will apply to it instantly! ). Meaning, same multiple html can refer to same css file*/
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* Style the List */
+.txt_color{
+  color: lightslategray;
+}
+
+/* Use a Class for Highlight */
+.highlight{
+  color: hsl(150, 80%, 75%);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Style the Image */
+.recipe-image{
+  width:250px;
+  height:200px;
+  border: 1px solid white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;  
 }

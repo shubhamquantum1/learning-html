@@ -1,0 +1,48 @@
+<!-- Mini-Project 3: Styling the Recipe Page. -->
+<!-- ---------------------------------------- -->
+<!-- Styling the recipe page using same style.css file that was used for project 1.
+     Additionally:
+        - center, round of border, size of image from css file
+        - and set ingredients and instruction list to lightslategray color
+        - and set ingredients and instruction title to underline
+        - and find a way to change color, font-weight & size of specific text (e.g., the Milk or Tea Powder) in list using class="highlight".
+-->
+
+<!-- Mandatory declaration that tells browser that this is a modern HTML5 document -->
+<!DOCTYPE html>   
+
+<html>
+    <!--Invisible to user. Contains metadata and page-->
+    <head>
+        <title>Cooking Recipe</title>
+        <link rel="stylesheet" href="../project 1/style.css">
+    </head>
+
+    <!-- Body visible to user-->
+    <body>
+        <h1> <u>Milk Tea Recipe</u> </h1>
+        
+        <img src="milk_tea.png" alt="Image of Milk Tea" class="recipe-image">
+        
+        <p> It is one of the <strong>most popular</strong> hot beverages in world and especially in India. 
+            <em>A cup of milk tea (chai)</em> in morning gives refreshing feel and put you on track of long hard day. 
+            It can be prepared with milk or milk powder. This recipe prepares Indian tea using milk, sugar, tea powder and water.<br>
+        </p>
+                
+            <h2> Ingredients: </h2>
+                <ul>
+                    <li class="txt_color">1 cup (250 ml) <span class="highlight">Milk</span>.</li>
+                    <li class="txt_color">2 teaspoons Tea Powder.</li>
+                    <li class="txt_color">1/4 cup (approx. 60 ml) Water.</li>
+                    <li class="txt_color">3 teaspoons Sugar.</li>
+                </ul>
+
+            <h2> Instructions: </h2>
+                <ol>
+                    <li class="txt_color">Boil water in a saucepan.</li>
+                    <li class="txt_color">Add sugar and tea powder in it and boil it for 3-4 minutes on medium flame.</li>
+                    <li class="txt_color">Add milk and boil it over medium flame for 6-7 minutes or until bubble starts to rise. You will see the change in color of the tea from milky shade to brown shade when it is ready.</li>
+                    <li class="txt_color">Turn off the gas and strain tea in cups.</li>
+                </ol>
+    </body>
+</html>

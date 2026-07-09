@@ -1,40 +1,25 @@
-<!-- Level 1 — Topic 4: Typography & Google Fonts -->
-<!-- ----------------------------------- -->
-<!-- 
-    By default, browsers render text using "Times New Roman," which looks like an outdated newspaper and screams "1995 website." 
-    Modern web design prefers clean sans-serif fonts (fonts without the tiny feet/ticks on the letters).
-    Instead of relying on fonts installed on the user's computer, we can import beautiful, free web fonts directly from Google Fonts.
-
-    1. Importing a Google Font
-        We can import a font at the very top of our style.css file using the @import command. Let's use the premium modern font "Outfit":
-        >> @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
-
-    2. Typography Properties
-        Once imported, we can style our text using these core properties:
-            font-family: Sets the font. We specify fallbacks in case the internet connection fails:
-                        font-family: 'Outfit', sans-serif;
-            font-size: Sets the size. We will use pixels (px) for now.
-            font-weight: Sets boldness. Can be normal, bold, or numbers (e.g. 300 is thin, 400 is normal, 700 is bold).
-            line-height: Controls the space between lines of text. Standard text feels cramped; adding line-height: 1.6; makes paragraphs instantly readable and feel premium.
+<!-- Mini-Project 3: Styling the Recipe Page. -->
+<!-- ---------------------------------------- -->
+<!-- Styling the recipe page in the project-2 using same the style.css file that was used for project 1.
+     Additionally:
+        - center, round and manage the size of image from css file
+        - Also, set ingredients and instruction list to lightslategray color
 
     Your Task:
-        Let's give your portfolio page a typography upgrade!
-
-        1. Open your style.css file.
-        2. At the very first line of your file (above body), paste the Google Font import:
-                @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
-        3. Update your CSS rules:
-            Under body:
-                Set font-family: 'Outfit', sans-serif;
-                Add line-height: 1.6;
-            Under h1:
-                Set font-size: 36px;
-                Set font-weight: 700;
-            Add a new rule for h4:
-                Set font-size: 24px;
-                Set font-weight: 600;
-            Under p:
-                Remove font-family: verdana; (since the body now inherits 'Outfit').
-                Set font-size: 16px;
-            Save and refresh your page!
+    1. Open `recipe.html`(the copy inside learning-css/project 2/).
+    2. Inside the <head> tag, add the <link> tag pointing to style.css:
+        `<link rel="stylesheet" href="style.css">`
+    3. Open `recipe.html` in your browser and refresh. You should see it instantly transform into dark mode!
+    4. Now, let's add custom styles to make it look even more premium:
+        * Find a way to underline Ingredients and Instructions heading.
+        * Style the Lists: In style.css, style the list color to lightslategray.
+        * Use a Class for Highlight:
+            * In recipe.html, find a way to change color, font-weight & size of specific text (e.g., the Milk or Tea Powder) using class="highlight".
+            * In style.css, create the .highlight class selector and make that text bold and colored with a vibrant green-cyan: hsl(150, 80%, 75%) , font-weight to bold and font-size to 20px.
+        * Style the Image:
+            * In recipe.html, delete the width="200" and height="200" attributes from your <img> tag, and add class="recipe-image" to it.
+            * In style.css, create the .recipe-image class selector. Set its width to 250px and height to 200px.
+            * Bonus Property: Add border-radius: 12px; to the .recipe-image class to round the corners of the image! (This is a sneak peek into the Box Model!).
+            * Additionally. find a way to center an image.
+    5. Save both files and check them in the browser.
 -->
