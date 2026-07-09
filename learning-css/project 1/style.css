@@ -1,3 +1,5 @@
+/* Added box model to `study-table` id attribute; linked to portfolio.html file */
+
 /* Importing premium modern 'outfit' font via google */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
 
@@ -48,6 +50,13 @@ div{
 #study-table{
   background-color: hsl(220, 15%, 22%);
   color: white;
+
+  /* New Box Model Properties: */
+  padding: 20px;       /* Adds space inside the table border */
+  margin-top: 30px;    /* Pushes the footer 30px away from the bottom of the table */
+  margin-bottom: 30px; /* Pushes other items away */
+  margin-left: auto;   /* Pushing table in center */
+  margin-right: auto;  /* Pushing table in center */
 }
 
 
