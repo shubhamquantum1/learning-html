@@ -1,20 +1,37 @@
-/* Will target body tag of portfolio.html file */
+/* Targetting tags color using Names, Hex code and HSL(hue, saturation, lightness) */
 body {
-  background-color: lightgray;
+  background-color: hsl(220, 15%, 16%);   /*previous it was => background-color: lightgray;*/
 }
 
-/* Will target html element using tag name */
 h1 {
-  color: black;
+  color: hsl(190, 90%, 65%);
   text-align: center;
 }
 
-/* Will target html element using class attribute */
-.nav-link {
-  font-weight: bold;
+h4 {
+  color: lightblue;
+  text-align: left;
 }
 
-/* Will target html element using id attribut */
+p {
+  color: hsl(220, 15%, 85%)
+}
+
+/* Changed div tag color to soft-light-blue using hex code*/
+div{
+  color: #f0e7e7aa
+}
+
+
+/* Changed .nav-link class color to soft-light-blue using HSL*/
+.nav-link {
+  font-weight: bold;
+  color: hsl(200, 80%, 50%)
+}
+
+
+/* Changes id=study-table background color to light dark using HSL and text color to white using color name*/
 #study-table{
-  background-color: white;
+  background-color: hsl(220, 15%, 22%);
+  color: white;
 }

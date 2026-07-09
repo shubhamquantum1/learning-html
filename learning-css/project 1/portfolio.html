@@ -1,16 +1,29 @@
-<!-- Level 1 — Topic 2: CSS Selectors -->
+<!-- Level 1 — Topic 3: CSS Color Systems (The HSL Secret) -->
 <!-- ----------------------------------- -->
 <!-- 
-    Tag Selectors - Targets every element on the page that matches that tag name.
-                    CSS Syntax: p { color: red; } (makes all paragraphs red).
-
-    Class Selectors - Target multiple elements that you want to style the same way. You define a class in HTML using the class attribute, and target it in CSS using a dot (.).
-                    HTML: <p class="alert-text">Warning!</p>
-                    CSS: .alert-text { color: orange; font-weight: bold; }
+    There are three ways to define colors in CSS:
+    1. Names: red, blue, lightgray (very limited).
+    2. Hex Codes: #3b82f6 or #ff0000 (industry standard, but impossible to read or adjust without a color picker).
+    3. HSL (Hue, Saturation, Lightness): The best system for developers. HSL is super intuitive because it behaves like mixing paint.
     
-    ID Selectors - target one single, unique element on the page. You define it in HTML using the id attribute, and target it in CSS using a hash (#).
-                    HTML: <footer id="site-footer">...</footer>
-                    CSS: #site-footer { color: grey; }
+    How HSL Works: hsl(Hue, Saturation%, Lightness%)
+    1. Hue (0 - 360): Think of a color wheel.
+        0 is Red
+        120 is Green
+        240 is Blue
+        Any number in between blends them (e.g., 180 is Cyan, 300 is Magenta).
+    2. Saturation (0% - 100%): How rich the color is.
+        0% is completely grayscale (shade of gray).
+        100% is full, vibrant color.
+    3. Lightness (0% - 100%): How bright the color is.
+        0% is pitch black.
+        100% is pure white.
+        50% is the "pure" color balance.
+    
+    Why HSL is a Developer's Superpower:
+    If you want to make a color slightly darker for a button hover effect, you don't need a color picker. You just change the lightness number:
+        Standard Blue: hsl(240, 100%, 50%)
+        Darker Blue: hsl(240, 100%, 40%) (just lowered lightness by 10%!)
 -->
 
 <!-- Mandatory declaration that tells browser that this is a modern HTML5 document -->
