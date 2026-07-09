@@ -1,4 +1,9 @@
-/* Added box model to `study-table` id attribute; linked to portfolio.html file */
+/* Added box-sizing property at the top to remove browser's default padding and provided our own padding value in body tag; */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 /* Importing premium modern 'outfit' font via google */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
@@ -10,6 +15,8 @@ body {
   background-color: hsl(220, 15%, 16%);   /*previous it was => background-color: lightgray;*/
   font-family: 'Outfit', sans-serif;        /*fallback to sans-serif when Outfit font-family failed to load because of poor internet connection;*/
   line-height: 1.6;
+  
+  padding: 40px; /* Add padding to the body so the page content doesn't touch the screen edges: */
 }
 
 h1 {
