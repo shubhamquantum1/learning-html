@@ -3,12 +3,18 @@ body {
   background-color: lightgray;
 }
 
+/* Will target html element using tag name */
 h1 {
   color: black;
   text-align: center;
 }
 
-p {
-  font-family: verdana;
-  font-size: 12px;
+/* Will target html element using class attribute */
+.nav-link {
+  font-weight: bold;
+}
+
+/* Will target html element using id attribut */
+#study-table{
+  background-color: white;
 }

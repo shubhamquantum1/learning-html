@@ -1,51 +1,32 @@
-<!-- Level 1 — Topic 1: Connecting CSS to HTML -->
-<!-- ----------------------------------------- -->
+<!-- Level 1 — Topic 2: CSS Selectors -->
+<!-- ----------------------------------- -->
 <!-- 
-    CSS is a separate language from HTML. Its main job is to add visuals, styling and layout in web page. There are three ways to connect CSS to HTML, but External Stylesheets is the professional standard is the way to do so and is also the one, that we'll be using.
+    Tag Selectors - Targets every element on the page that matches that tag name.
+                    CSS Syntax: p { color: red; } (makes all paragraphs red).
+
+    Class Selectors - Target multiple elements that you want to style the same way. You define a class in HTML using the class attribute, and target it in CSS using a dot (.).
+                    HTML: <p class="alert-text">Warning!</p>
+                    CSS: .alert-text { color: orange; font-weight: bold; }
     
-    <link> tag => It is primarily used to connect external CSS stylesheets & icons to HTML and is sits inside the <head> section of HTML file.
-
-    It has two attributes; rel & href. while rel defines the relationship, the href contains css file path.
-    For example :>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="icon" href="favicon.ico">
+    ID Selectors - target one single, unique element on the page. You define it in HTML using the id attribute, and target it in CSS using a hash (#).
+                    HTML: <footer id="site-footer">...</footer>
+                    CSS: #site-footer { color: grey; }
 
 
-    Understanding a CSS Rule => In a CSS file, we write rules. A rule looks like this:
-        body {
-            background-color: lightgray;
-        }
-        *   body (Selector): Tells the browser who to target. Here, we are targeting the entire page body.
-        *   {} (Curly Braces): Contain all the styling instructions for that selector.
-        *   background-color (Property): The feature we want to change.
-        *   lightgray (Value): The new setting for that feature.
-        *   ; (Semicolon): Crucial! Every single CSS statement must end with a semicolon, or the browser will get confused and ignore the styles below it.
-
-
-    <link> vs <a> (Anchor Tag) :>
-        <link>: Unclickable but used by the browser to load background files (like CSS or site icons).
-        <a>: Used to create clickable hyperlinks that allow users to navigate between pages
-
-
-    Your Task:
-    1. In your code editor, Create a new folder learning-css/project 1 folder with listed files copied from learning-html folder
-    2. Create a new file inside and name it exactly: style.css
-    3. Open your portfolio.html file.
-    4. Inside the <head> tags (just below the <title> tag), add the <link> tag to connect to your stylesheet:
-        <link rel="stylesheet" href="style.css">
-    5. Open your new style.css file and type the following rule exactly as you see it:
-        body {
-            background-color: lightgray;
+    Your Task: Let's practice Class and ID selectors on your portfolio.html page.
+    1. Open your HTML file and add a class and an ID:
+        * To your three navigation links (<a> tags), add the class nav-link to all of them (e.g. <a href="portfolio.html" class="nav-link"> Home </a>).
+        * To your <table> tag, add id="study-table" (e.g. <table border="1" id="study-table">).
+    
+    2. Open your style.css and add these rules:
+        * Target the navigation links using the class selector (.nav-link) and make them bold:
+            .nav-link {
+                font-weight: bold;
             }
-
-        h1 {
-            color: black;
-            text-align: center;
-        }
-
-        p {
-            font-family: verdana;
-            font-size: 12px;
-        }
-    6. Save both files, and open projects/project 4/portfolio.html in your web browser.
+            
+        * Target the table using the ID selector (#study-table) and change its background color to white:
+            #study-table {
+                background-color: white;
+            }
+    3. Save both files and refresh your browser!                    
 -->

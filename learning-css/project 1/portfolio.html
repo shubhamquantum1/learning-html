@@ -1,11 +1,16 @@
-<!-- Level 1 — Topic 1: Connecting CSS to HTML -->
-<!-- ----------------------------------------- -->
+<!-- Level 1 — Topic 2: CSS Selectors -->
+<!-- ----------------------------------- -->
 <!-- 
-    <link> tag => Connect external CSS with HTML and is sits inside the <head> section of HTML file.
-    It has two attributes; rel & href. while rel defines the relationship, the href contains css file path.
-    For example :>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="icon" href="favicon.ico">
+    Tag Selectors - Targets every element on the page that matches that tag name.
+                    CSS Syntax: p { color: red; } (makes all paragraphs red).
+
+    Class Selectors - Target multiple elements that you want to style the same way. You define a class in HTML using the class attribute, and target it in CSS using a dot (.).
+                    HTML: <p class="alert-text">Warning!</p>
+                    CSS: .alert-text { color: orange; font-weight: bold; }
+    
+    ID Selectors - target one single, unique element on the page. You define it in HTML using the id attribute, and target it in CSS using a hash (#).
+                    HTML: <footer id="site-footer">...</footer>
+                    CSS: #site-footer { color: grey; }
 -->
 
 <!-- Mandatory declaration that tells browser that this is a modern HTML5 document -->
@@ -29,11 +34,12 @@
 
         <nav>
             <div>
-                <a href="portfolio.html"> Home </a>
+                <a href="portfolio.html" class="nav-link"> Home </a>
                 <br>    
-                <a href="about.html"> About Me </a>
+                <a href="about.html" class="nav-link"> About Me </a>
                 <br>
-                <a href="hobbies.html"> My Hobbies </a>                              
+                <a href="hobbies.html" class="nav-link"> My Hobbies </a>
+                <br>                          
             </div>
         </nav>
         
@@ -49,7 +55,7 @@
                     </ul>
             </div>
 
-            <table border="1"> <!-- We use border="1" just so we can see the gridlines without CSS -->
+            <table border="1" id="study-table"> <!-- We use border="1" just so we can see the gridlines without CSS -->
                 <tr>
                     <th>Day</th>
                     <th>Subject</th>
