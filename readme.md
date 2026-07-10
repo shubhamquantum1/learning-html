@@ -1,41 +1,28 @@
-<!-- Level 3 — Topic 2: Responsive Design & Media Queries -->
+<!-- Level 3 — Topic 3: Transitions (Micro-animations) -->
 <!-- ---------------------------------------------------- -->
 <!-- 
-    Problem : Today, more than 50% of web traffic comes from mobile phones. If your website only looks good on a wide desktop screen, it's considered broken. Responsive Design means making your layout adapt dynamically to whatever screen size the user has.
-              Previously, we used max-width: 450px; on your profile card. Because we used max-width instead of a fixed width: 450px, the card is already responsive! If a user opens it on a mobile screen that is 375px wide, the card will shrink to fit.
+    Problem : Right now, when you hover over your navigation buttons, the colors and shadows change instantly. In premium modern web design, we prefer things to feel smooth, fluid, and natural.
 
-    Solution: But what if we want to change the layout entirely on small screens? For example, if a screen is too narrow, three horizontal buttons might get squished. We would want to stack them vertically instead.
-    We do this using a Media Query:
-    @media (max-width: 600px) {
-        /* Any CSS rules written here will ONLY apply if the screen is 600px wide or narrower! */
-        body {
-            background-color: black; /* Test color */
-        }
-    }
+    Solution: We achieve this using the transition property, which controls how fast or slow a style change takes place.
+                transition: property duration timing-function;
+                transition: all 0.3s ease;
+    
+                * all: Apply the transition to all changing properties (background, text color, shadow, etc.).
+                * 0.3s: The animation will take 0.3 seconds (300 milliseconds). This is the "sweet spot" for web animations—fast enough to feel responsive, but slow enough to be noticed.
+                * ease: The motion starts slow, speeds up in the middle, and slows down at the end, making it feel very organic and natural.
 
-    Your Task: Let's add responsive behavior to your navigation links so they stack vertically on mobile screens.
+    IMPORTANT: The Golden Rule of Transitions: Always put the transition property on the base selector (e.g., .nav-link), NOT on the hover selector (.nav-link:hover). 
+               If you put it on the hover selector, the transition will only work when you hover on, but when you hover off, it will snap back instantly and look broken!
+
+
+    Your Task: Let's make your button hover effects smooth and fluid!
     1. Open your style.css file.
-    2. At the very bottom of your file, add this Media Query block:
-        @media (max-width: 600px) {
-            /* 1. Reduce body padding so we don't waste screen space on mobile: */
-            body {
-                padding: 20px;
-            }
-            
-            /* 2. Stack navigation links vertically instead of horizontally: */
-            nav div {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            /* 3. Remove horizontal margins from links on mobile: */
-            .nav-link {
-                margin-right: 0;
-                width: 100%;       /* Makes buttons take full mobile width */
-                text-align: center;
-            }
+    2. In your .nav-link rule (the base selector), add the transition:
+        .nav-link {
+            /* ... your existing properties ... */
+    
+            /* Add transition: */
+            transition: all 0.3s ease;
         }
-    3. Save the file.
-    4. Go to your browser. Grab the right edge of your browser window with your mouse and drag it to make the window narrower.
-    5. When the window width goes below 600px, watch your buttons instantly stack vertically!
+    3. Save and refresh. Hover over your buttons now!               
 -->

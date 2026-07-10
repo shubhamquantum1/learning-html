@@ -1,4 +1,4 @@
-/* Applied Responsive design concept using @media Query */
+/* Applied transition animation to the navigation links */
 
 * {
   box-sizing: border-box;
@@ -85,6 +85,9 @@ div{
     border-radius: 8px;                      /* Rounded corners */
     border: 1px solid hsl(220, 15%, 32%);  /* Subtle border highlight */
     text-decoration: none;                   /* Removes the default link underline! */
+
+    /* Add transition: */
+    transition: all 0.3s ease;
 }
 
 .nav-link:hover {
