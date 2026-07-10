@@ -1,4 +1,5 @@
-/* Applied specific css to about.html file in project-3 folder while remaining html is targetted using above existing CSS (i.e.,the dark mode and "Outfit" font will apply to it instantly! ). Meaning, same multiple html can refer to same css file */
+/* Applied flexbox concept to navifation bar */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -61,7 +62,7 @@ div{
 
 /* Navigation bar*/
 /* Centering navigation bar */
-.nav {
+.nav div {
     display: flex;
     justify-content: center; /* Centers items horizontally */
     gap: 80px;              /* Adds clean space between links */
@@ -75,16 +76,15 @@ div{
 
     /* Change display to hybrid block, and add spacing: */
     display: inline-block;
-    margin-left : 20px;
-    margin-right: 20px;   /* Pushes links away from each other horizontally */
     margin-top: 10px;    /* Adds space above the navigation bar */
+    margin-left : 20px;
 
     /* Style it like a button: */
-    background-color: hsl(220, 15%, 22%); /* Lighter grey than the body */
-    padding: 8px 16px;                     /* Inside breathing room */
-    border-radius: 8px;                    /* Rounded corners */
+    background-color: hsl(220, 15%, 22%);  /* Lighter grey than the body */
+    padding: 8px 16px;                       /* Inside breathing room */
+    border-radius: 8px;                      /* Rounded corners */
     border: 1px solid hsl(220, 15%, 32%);  /* Subtle border highlight */
-    text-decoration: none;                 /* Removes the default link underline! */
+    text-decoration: none;                   /* Removes the default link underline! */
 }
 
 .nav-link:hover {

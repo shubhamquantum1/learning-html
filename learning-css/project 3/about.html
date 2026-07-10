@@ -1,7 +1,25 @@
-<!-- 🃏 Mini-Project 4: Creating a Modern Profile Card -->
+<!-- Level 3 — Topic 1: Flexbox (The Layout Champion) -->
 <!-- ---------------------------------------------------- -->
 <!-- 
-    For this challenge, you will transform your About Me page into a beautiful, centered Profile Card with depth, rounded corners, a circular profile picture, and a soft drop shadow.
+    Problem : Up until now, you've used margin and display hacks to align elements on your screen. But what if you want to align three boxes side-by-side? What if you want to center a vertical column of items?
+    Solution : In modern web design, we do this using Flexbox (Flexible Box Layout). It is the most widely used layout tool in CSS.
+
+    How Flexbox Works: Parents and Children
+    To use Flexbox, you declare display: flex; on a parent container (e.g., a <div>, <nav>, or <main>).
+    Once you make a parent container a Flexbox, all of its direct children automatically align themselves according to the parent's rules.
+
+    Core Flexbox Properties (for the Parent Container):
+    1. display: flex;: Activates Flexbox.
+    2. flex-direction: Controls the direction of the items:
+        * row (default): Lays children out horizontally in a line.
+        * column: Lays children out vertically in a stack.
+    3. justify-content: Aligns children along the direction of the row/column:
+        * center: Bundles them in the middle.
+        * space-between: Pushes them to the outer edges.
+        * space-around: Puts equal space around all children.
+    4. align-items: Aligns children in the opposite direction (e.g., centers them vertically if they are in a row).
+        * center is the most common use to keep items aligned.
+    5. gap: The spacing between the children. This is a lifesaver! Instead of adding manual margins to each link/button, gap defines the exact spacing between all items inside the container automatically.
 -->
 
 
@@ -24,9 +42,11 @@
         </header>
 
         <nav class="nav">
-            <a href="portfolio.html" class="nav-link"> Home </a> 
-            <a href="about.html" class="nav-link"> About Me </a>
-            <a href="hobbies.html" class="nav-link"> My Hobbies </a>                         
+            <div>
+                <a href="portfolio.html" class="nav-link"> Home </a> 
+                <a href="about.html" class="nav-link"> About Me </a>
+                <a href="hobbies.html" class="nav-link"> My Hobbies </a>                         
+            </div>
         </nav>
         
         <main>
