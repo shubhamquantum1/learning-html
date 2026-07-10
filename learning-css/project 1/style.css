@@ -1,4 +1,4 @@
-/* Applied flexbox concept to navifation bar */
+/* Applied Responsive design concept using @media Query */
 
 * {
   box-sizing: border-box;
@@ -172,4 +172,28 @@ div{
   /* center image */
   display: block;
   margin: 0 auto 20px auto;                         /* 0 top, auto sides, 20px bottom */
+}
+
+
+
+
+
+@media (max-width: 600px) {
+  /* 1. Reduce body padding so we don't waste screen space on mobile: */
+  body {
+    padding: 20px;
+  }
+  
+  /* 2. Stack navigation links vertically instead of horizontally: */
+  nav div {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* 3. Remove horizontal margins from links on mobile: */
+  .nav-link {
+    margin-right: 0;
+    width: 100%;       /* Makes buttons take full mobile width */
+    text-align: center;
+  }
 }
