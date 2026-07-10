@@ -1,64 +1,47 @@
-<!-- Level 2 — Topic 3: Display Properties (block, inline, inline-block) -->
-<!-- ------------------------------------------------------------------- -->
+<!-- Level 2 — Topic 4: Shadows, Borders, & Hover Effects -->
+<!-- ---------------------------------------------------- -->
 <!-- 
-    Since, we have done CSS reset in previous topic, now html page is in our control. 
-    we can use, padding and margin properties in css to manage everything.
-
-    In CSS, every element has a display property that dictates how it behaves:
-
-    1. display: block (e.g. <h1>, <p>, <div>)
-        * Starts on a new line.
-        * Takes up the full width of the screen.
-        * Fully espects all padding and margins.
-    2. display: inline (e.g. <a>, <span>)
-        * Does NOT start on a new line (flows next to other inline elements).
-        * Only takes up as much width as its content.
-        * ⚠️ Crucial Limit: Inline elements ignore vertical margins and padding.
-    3. display: inline-block (The Hybrid)
-        * Does NOT start on a new line (sits next to other elements).
-        * But behaves like a block: fully respects all margins, padding, width, and height!
+    To make our website feel truly premium, we need to add details that give it depth. We do this using borders, rounded corners (border-radius), and shadows (box-shadow).
+        1. Rounded Corners (border-radius) - By default, all boxes on the web have sharp, square edges. border-radius lets us round them off.
+            border-radius: 8px; /* Smooth, modern corners */
+            border-radius: 50%; /* Makes an element a perfect circle (if it has equal width & height) */
+        
+        2. Box Shadows (box-shadow) - Shadows create depth and make elements look like they are floating above the page.
+            box-shadow: x-offset y-offset blur spread color;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+                        0px = Horizontal offset (shadow sits centered).
+                        4px = Vertical offset (shadow is pushed 4px down).
+                        12px = Blur radius (how soft the shadow is).
+                        rgba(0, 0, 0, 0.3) = Black color with 30% opacity (transparent). Using transparent shadows is crucial to make them look realistic!
+        
+        3. Hover Effects (:hover) - A "pseudo-class" that allows you to style an element only when the user hovers their mouse cursor over it.
+            .button:hover {
+                background-color: white; /* Changes color on hover! */
+            }
+        
+    Your Task: Let's turn your plain text navigation links into sleek, interactive dark buttons!
+    1. Open your style.css file.
+    2. Update your .nav-link rule to style it like a button:
+        .nav-link {
+            font-weight: bold;
+            color: hsl(200, 80%, 75%);
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            
+            /* Style it like a button: */
+            background-color: hsl(220, 15%, 22%); /* Lighter grey than the body */
+            padding: 8px 16px;                     /* Inside breathing room */
+            border-radius: 8px;                    /* Rounded corners */
+            border: 1px solid hsl(220, 15%, 32%);  /* Subtle border highlight */
+            text-decoration: none;                 /* Removes the default link underline! */
+        }
+    3. Add a hover effect below it so the buttons light up when hovered:
+        .nav-link:hover {
+            background-color: hsl(220, 15%, 32%);  /* Turns lighter grey */
+            color: hsl(190, 90%, 65%);             /* Text changes to cyan-blue */
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4); /* Glow shadow */
+        }
     
-    Your navigation links (<a>) are currently inline. Because they are inline, they ignore vertical margins and crowd together. If we change them to inline-block, we can space them out beautifully.
-    
-    Your Task:
-    1. Open your portfolio.html file.
-    2. In the navigation section, delete the <br> tags between your home, about, and hobbies links. We don't need HTML line breaks anymore; we will use CSS to control their layout!
-    3. Open your style.css file and add the following spacing rules:
-       * Add space below headings and paragraphs:
-            h1 {
-                margin-bottom: 24px;
-            }
-            p {
-                margin-bottom: 36px;
-            }
-
-       * Add space and indent lists:
-            ul {
-                margin-bottom: 24px;
-                margin-left: 24px; /* Restores the indentation for the bullet points */
-            }
-            li {
-                margin-bottom: 2px; /* Adds breathing room between list items */
-            }
-
-        * Style your navigation links by changing their display type:
-            /* Centering navigation bar */
-            .nav {
-                display: flex;
-                justify-content: center; /* Centers items horizontally */
-                gap: 40px;              /* Adds clean space between links */
-                margin-bottom: 60px;  /*Adds space below the navigation bar */
-            }
-
-            /* Changed .nav-link class color to soft-light-blue using HSL*/
-            .nav-link {
-                font-weight: bold;
-                color: hsl(200, 80%, 50%);
-
-                /* Change display to hybrid block, and add spacing: */
-                display: inline-block;
-                margin-left:30px;
-                margin-right: 20px;   /* Pushes links away from each other horizontally */
-                margin-top: 10px;    /* Adds space above the navigation bar */
-            }
+    Save and refresh. Hover your mouse over the menu links!
 -->

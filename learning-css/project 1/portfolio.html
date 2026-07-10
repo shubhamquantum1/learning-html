@@ -1,24 +1,23 @@
-<!-- Level 2 — Topic 3: Display Properties (block, inline, inline-block) -->
-<!-- ------------------------------------------------------------------- -->
+<!-- Level 2 — Topic 4: Shadows, Borders, & Hover Effects -->
+<!-- ---------------------------------------------------- -->
 <!-- 
-    Since, we have done CSS reset in previous topic, now html page is in our control. 
-    we can use, padding and margin properties in css to manage everything.
-
-    In CSS, every element has a display property that dictates how it behaves:
-
-    1. display: block (e.g. <h1>, <p>, <div>)
-        * Starts on a new line.
-        * Takes up the full width of the screen.
-        * Fully espects all padding and margins.
-    2. display: inline (e.g. <a>, <span>)
-        * Does NOT start on a new line (flows next to other inline elements).
-        * Only takes up as much width as its content.
-        * ⚠️ Crucial Limit: Inline elements ignore vertical margins and padding.
-    3. display: inline-block (The Hybrid)
-        * Does NOT start on a new line (sits next to other elements).
-        * But behaves like a block: fully respects all margins, padding, width, and height!
-    
-    Your navigation links (<a>) are currently inline. Because they are inline, they ignore vertical margins and crowd together. If we change them to inline-block, we can space them out beautifully.
+    To make our website feel truly premium, we need to add details that give it depth. We do this using borders, rounded corners (border-radius), and shadows (box-shadow).
+        1. Rounded Corners (border-radius) - By default, all boxes on the web have sharp, square edges. border-radius lets us round them off.
+            border-radius: 8px; /* Smooth, modern corners */
+            border-radius: 50%; /* Makes an element a perfect circle (if it has equal width & height) */
+        
+        2. Box Shadows (box-shadow) - Shadows create depth and make elements look like they are floating above the page.
+            box-shadow: x-offset y-offset blur spread color;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+                        0px = Horizontal offset (shadow sits centered).
+                        4px = Vertical offset (shadow is pushed 4px down).
+                        12px = Blur radius (how soft the shadow is).
+                        rgba(0, 0, 0, 0.3) = Black color with 30% opacity (transparent). Using transparent shadows is crucial to make them look realistic!
+        
+        3. Hover Effects (:hover) - A "pseudo-class" that allows you to style an element only when the user hovers their mouse cursor over it.
+            .button:hover {
+                background-color: white; /* Changes color on hover! */
+            }
 -->
 
 <!-- Mandatory declaration that tells browser that this is a modern HTML5 document -->
