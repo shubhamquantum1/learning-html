@@ -1,4 +1,9 @@
 /* Added box-sizing property at the top to remove browser's default padding and provided our own padding value in body tag; */
+/* 
+  Since, we have done CSS reset in previous topic, now html page is in our control. 
+  we can use, padding and margin properties in css to manage everything            
+*/
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -24,6 +29,8 @@ h1 {
   text-align: center;
   font-size: 36px;
   font-weight: 700;
+
+  margin-bottom: 24px;
 }
 
 h2 {
@@ -38,6 +45,16 @@ p {
   color: hsl(220, 15%, 85%);
   font-family: verdana;
   font-size: 16px;
+  margin-bottom: 36px;
+}
+
+ul {
+  margin-bottom: 24px;
+  margin-left: 24px; /* Restores the indentation for the bullet points */
+}
+
+li {
+  margin-bottom: 2px; /* Adds breathing room between list items */
 }
 
 /* Changed div tag color to soft-light-blue using hex code*/
@@ -46,11 +63,40 @@ div{
 }
 
 
+
+/* Navigation bar*/
+/* Centering navigation bar */
+.nav {
+    display: flex;
+    justify-content: center; /* Centers items horizontally */
+    gap: 40px;              /* Adds clean space between links */
+    margin-bottom: 60px;  /*Adds space below the navigation bar */
+}
+
 /* Changed .nav-link class color to soft-light-blue using HSL*/
 .nav-link {
-  font-weight: bold;
-  color: hsl(200, 80%, 50%)
+    font-weight: bold;
+    color: hsl(200, 80%, 50%);
+
+    /* Change display to hybrid block, and add spacing: */
+    display: inline-block;
+    margin-left:30px;
+    margin-right: 20px;   /* Pushes links away from each other horizontally */
+    margin-top: 10px;    /* Adds space above the navigation bar */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Changes id=study-table background color to light dark using HSL and text color to white using color name*/
