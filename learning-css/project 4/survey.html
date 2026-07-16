@@ -1,0 +1,96 @@
+<!-- Mandatory declaration that tells browser that this is a modern HTML5 document -->
+<!DOCTYPE html>   
+
+<!-- Root tag. Packs everything on page -->
+<html>
+
+    <!--Invisible to user. Contains metadata, page title and links to CSS-->
+    <head>
+        <title>Survey Form</title>
+        <link rel="stylesheet" href="../project 1/style.css">          
+    </head>
+
+    <!-- Body. Everything inside is visible to user-->
+    <body>
+        <header> 
+            <h1> <u> Registration & Survey Form </u> </h1> 
+        </header>
+
+        <nav class="nav">
+            <div>
+                <a href="portfolio.html" class="nav-link"> Home </a> 
+                <a href="about.html" class="nav-link"> About Me </a>
+                <a href="hobbies.html" class="nav-link"> Hobbies </a>      
+                <a href="contact.html" class="nav-link"> Contact </a>     
+                <a href="survey.html" class="nav-link"> Take survey! </a>                               
+            </div>
+        </nav>
+        
+        <main>
+            <h2> Take Survey: </h2>
+            <div class="form-container ">
+                <form>
+                        <label for="name"> Full name: </label>
+                        <input type="text" id="name">
+
+                        <label for="email"> Email: </label>
+                        <input type="email" id="email">
+
+                        <label for="pwd"> Password: </label>
+                        <input type="password" id="pwd"><br>
+
+                        <label for="drpdw"> Role/Experience: </label>
+                        <select id="drpdw">
+                            <option value="student">Student</option>
+                            <option value="developer">Developer</option>
+                            <option value="hobbyist">Hobbyist</option>                        
+                        </select>      
+
+                        <!-- 📦 Checkbox Section -->
+                        <div class="option-container">
+                            <div class="option-row">
+                                <input type="checkbox" id="iot" name="Iot" value="IoT">
+                                <label for="iot">IoT</label>
+                            </div>
+                            <div class="option-row">
+                                <input type="checkbox" id="aiml" name="AI/ML" value="ai/ml">
+                                <label for="aiml">AI/ML</label>
+                            </div>
+                            <div class="option-row">
+                                <input type="checkbox" id="robotix" name="robotics" value="robotics">
+                                <label for="robotix">Robotics</label>
+                            </div>
+                        </div>
+
+                        <!-- 📦 Radio Button Section -->
+                        <div class="option-container">
+                            <div class="option-row">
+                                <input type="radio" id="Beginner" name="Coding Exp.">
+                                <label for="Beginner">Beginner</label>
+                            </div>
+                            <div class="option-row">
+                                <input type="radio" id="Intermediate" name="Coding Exp.">
+                                <label for="Intermediate">Intermediate</label>
+                            </div>
+                            <div class="option-row">
+                                <input type="radio" id="Expert" name="Coding Exp.">
+                                <label for="Expert">Expert</label>
+                            </div>
+                        </div>
+
+
+                        <label for="message"> Additional comments: </label>
+                        <textarea id="message" rows="4" cols="50"></textarea>
+                                                                                               
+                        <button type="submit">Submit</button>
+                    <br><br>
+                </form>
+            </div>
+        </main>
+                
+        <footer> 
+            &copy; 2026 My Coding Journey. All rights reserved.
+        </footer> 
+    </body>
+
+</html>

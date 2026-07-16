@@ -32,8 +32,8 @@ h1 {
 h2 {
   color: lightblue;
   text-align: left;
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 600;
   text-decoration: underline;
 }
 
@@ -198,5 +198,174 @@ div{
     margin-right: 0;
     width: 100%;       /* Makes buttons take full mobile width */
     text-align: center;
+  }
+}
+
+
+
+
+
+/* Applied specific css to hobbies.html file in project-3 folder while remaining html is targetted using above existing CSS (i.e.,the dark mode and "Outfit" font will apply to it instantly! ). Meaning, same multiple html can refer to same css file*/
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* Target the list container */
+ol {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; Centers everything horizontally */
+    /* padding: 0;          Removes default list indentation */
+    /* list-style-position: inside; Keeps the numbers aligned with the centered text */
+
+    margin-top: 60px;
+}
+
+/* Target each individual list item block */
+ol li {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; /* Centers the image directly under the text */
+    text-align: center;  /* Centers the text alignment */
+    
+    /* Typography styling for the text */
+    font-weight: bold;       
+    text-decoration: underline; 
+    
+    margin-bottom: 60px; /* Adds clean spacing between each hobby card */
+}
+
+
+/* Style the Card */
+.hobby-image{
+  max-width: 450px;                                 /* Give it a card-like width */
+  padding: 20px;                                    /* Give it inside breathing room */
+  background-color: hsl(220, 15%, 20%);           /* Set its background color to a slightly lighter grey than the body */
+  border-radius: 16px;                              /* Give it rounded corners */
+  border: 1px solid hsl(220, 15%, 28%);           /* Add a border highlight */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);   /* Add a deep, soft floating shadow */
+  margin: 15px auto;                                /* Center the card on the page: Set its margin to: margin: 40px auto; (This will automatically calculate the left and right margins to center the card perfectly on the screen!). */
+
+  transition: all 0.3s ease;                        /* Add transition: */
+}
+
+.hobby-image:hover {
+  background-color: hsl(220, 15%, 32%);  /* Turns lighter grey */
+  color: hsl(190, 90%, 65%);             /* Text changes to cyan-blue */
+  transform: scale(1.03); /* Scales up by 3% */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4); /* Glow shadow */
+}
+
+
+
+
+
+
+
+/* Applied specific css to contact.html and survey.html file in project-4 folder while remaining html is targetted using above existing CSS (i.e.,the dark mode and "Outfit" font will apply to it instantly! ). Meaning, same multiple html can refer to same css file*/
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* Style the Card */
+.form-container{
+  max-width: 650px;                                 /* Give it a card-like width */
+  padding: 40px;                                    /* Give it inside breathing room */
+  background-color: hsl(220, 15%, 20%);           /* Set its background color to a slightly lighter grey than the body */
+  border-radius: 16px;                              /* Give it rounded corners */
+  border: 1px solid hsl(220, 15%, 28%);           /* Add a border highlight */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);   /* Add a deep, soft floating shadow */
+  margin: 40px auto;                                /* Center the card on the page: Set its margin to: margin: 40px auto; (This will automatically calculate the left and right margins to center the card perfectly on the screen!). */
+  transition: all 0.3s ease;                        /* Add transition: */
+
+  /* Clear vertical stacking for main inputs */
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  input, select, textarea, button {
+    box-sizing: border-box;
+    font-family: inherit;
+  }
+
+  /* Structural Headings (Full name, Email, Password, etc.) */
+  form > label {
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+
+
+  /* Form Fields Styling */
+  input[type="text"], 
+  input[type="email"], 
+  input[type="password"], 
+  select, 
+  textarea {
+    width: 100%;                          
+    padding: 12px;                        
+    background-color: hsl(220, 15%, 24%); 
+    border: 1px solid hsl(220, 15%, 34%);  
+    border-radius: 8px;                   
+    color: white;                         
+    outline: none;                        
+    transition: border-color 0.3s ease;
+    margin-bottom: 20px;                  
+  }
+
+  input:focus, select:focus, textarea:focus {
+    border-color: hsl(190, 90%, 65%);
+  }
+
+  /* Spacing for the choice groups */
+  .option-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  /* 🚀 THE FIX: Forces label to left and input to right with spacing */
+  .option-row {
+    display: flex;
+    flex-direction: row-reverse; /* Reverses the flow so inputs go to the absolute right side */
+    justify-content:space-between; /* Pushes text to left wall, box to right wall */
+    align-items: center; /* Centers alignment vertically */
+    width: 60%;
+    margin: auto;
+  }
+
+  /* Keep checkboxes and radio button sizes natural */
+  .option-row input[type="checkbox"], 
+  .option-row input[type="radio"] {
+    width: 18px;          
+    height: 18px;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  /* Clean styles for option text */
+  .option-row label {
+    font-weight: normal;
+    color: hsl(220, 10%, 85%);
+    margin: 0;
+    cursor: pointer;
+  }
+
+  /* Submit Button Layout */
+  button[type="submit"] {
+    background-color: hsl(190, 90%, 65%);
+    width: 30%;                          
+    padding: 8px;                        
+    border: none;  
+    border-radius: 20px;                   
+    color: black;                         
+    font-weight: bold;
+    margin-top: 15px;                  
+    align-self: flex-end; 
+    cursor: pointer;
+    transition: all 0.3s ease;                        
+  }
+
+  button:hover {
+    background-color: hsla(128, 45%, 47%, 0.959);   /* Turns lighter grey */
+    color: hsl(186, 100%, 2%);                      /* Text changes to cyan-blue */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);    /* Glow shadow */
   }
 }
