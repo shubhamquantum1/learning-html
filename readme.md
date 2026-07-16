@@ -1,61 +1,75 @@
-<!-- Level 3 — Topic 2: Variables (const & let), rules and basic data types-->
-<!-- ---------------------------------------------------- -->
+<!-- Level 3 — Topic 3: Strings, template literals and basic string operations-->
+<!-- Mini-Project 5: The Study Tracker Dashboard -->
+<!-- ------------------------------------------------------------------------ -->
 <!-- 
-        Variables are Containers for Storing Data. In JavaScript Variables can be declared in 4 ways:
-        * Automatically
-        * Using var
-        * Using let
-        * Using const
+        Strings are ordered sequence of characters represented by single, double quotes and backticks(also template literal as part of modern JS) [ordered sequence means it supports indexing as well as slicing]
     
-        WARNING - Do not use var! It is an obsolete keyword that has buggy memory-sharing rules. Modern standards dictate only using const and let.
+        Template Literals:
+        * Template string is modern way of representing a JS string using backticks(`)
+        * Using template literals, we can add single quotes and double quotes in a string without using escape characters
+        * Additionally, template literals also supports string interpolation meaning dynamically insertion of variables/value in a string using expression \`${…}\`
+                strg_1 = `My name is "Anthony Gonsalv's"`
+                console.log(strg_1);
 
 
-        Rules for writing variables in javascript [note - In javascript variables are also called identifiers]
-        * JS variables can start with letter, $ and underscore and can only contains Alphanumeric characters (A-Za-z0-9) and special character (_ and $) 
-        * JS variables are case sensitive meaning x=10 and X=20 are different variables. 
-        * JS variables are dynamically typed means variable type can be changed on the go. 
+                var a = 'Ram'
+                var b = 'Shyam'
+                var z = `${a} and ${b} are good boys`
+                console.log(z);
 
-        JavaScript has mainly 7 primitive Datatypes and one non-primitive object data
-        NNSSBBUO
-        1. Null
-        2. Number (int + float)
-        3. Symbol
-        4. String
-        5. Boolean
-        6. Bigint
-        7. Undefined
-        8. Object (non-primitive type)
-        where as object data type can contain:
-                1. An object
-                2. An array
-                3. A date
+        String Methods:
+        1. Length of string	            
+            .length	            strg.length	            “Shubham”.length
+                    
+        2. Case conversion	
+            .toUpperCase()	Convert string into Uppercase 	“Shubham”.toUpperCase()
+            .toLowerCase()	Convert string into Lowercase	“Shubham”.toLowerCase()
+                    
+        3. String Indexing	    strg[0]	            strg[index_position]	“Shubham”[0]
+                    
+        4. String slicing (extracting substring)	
+            .slice(start, end)	Extract a substring	"Shubham".slice(0,4) → "Shub”
+            .substring(start, end)	Similar to .slice() method but doesnot accept negative index	"Shubham".substring(0,4) → "Shub”
+            .substr(start, length)	Extract substring of specified length	"Shubham Gupta".substr(8,5) → "Gupta”
+                    
+        5. Splitting and joining	
+            .split(separator)	Splits string into array	"Hello world".split(" ") → ["Hello", "world"]
+            .join(separator)	Joins array into a string	["Hello", "World"].join(" ") → "Hello World"
+                    
+        6. Modifying string	
+            .replace("old", "new")	Replaces first occurrence	"Hello".replace("l", "x") → "Hexlo"
+            .replaceAll("old", "new")	Replaces all occurrence	"Hello".replaceAll("l", "x") → "Hexxo"
+            .concat(str1, str2)	Joins multiple strings	"Hello".concat(" ", "World") → "Hello World"
+            .trim()	Remove whitespaces	" MVM ".ltrim() → "MVM   "
+            .repeat(count)	return multiplied string value	
+                    
+        7. Searching in string	
+            .indexOf("word")	Finds first occurrence	"Hello".indexOf("l") → 2
+            .includes("word")	Checks if string contains substring	"Hello".includes("He") → true
+            .search("pattern")	Returns index position of match 	"Hello".search("He") → 0
+            .match("pattern")	Finds matches in a string	"The rain in SPAIN".match(/ain/g) → ["ain", "ain"]
+            .startsWith("word")	Checks if string starts with value	"JavaScript".startsWith("Java") → true
+            .endsWith("word")	Checks if string ends with value	"JavaScript".endsWith("Script") → true
 
-        // // 7 Datatypes:
-        // let a = null;
-        // let b = 10;
-        // let c = Symbol('i am a symbol')
-        // let d = 'shubham';
-        // let e = true;
-        // let f = BigInt('567');
-        // let g = undefined;
 
+        This is your solo challenge for Level 1. You will write the math and printing code yourself in script.js.
 
-        Your Task: Let's store some values and do some math in your script.js file!
-        1. Open your script.js file and delete your connection log.
-        2. Type the following code:
-            // 1. Store your student details in constants
-            const studentName = "Shubham";
-            const weeklyGoalHours = 12;
+        Your Task:
+        1. Open your script.js file and clear the existing code.
+        2. Declare these exact variables at the top:
+            * const studentName = "Shubham";
+            * const weeklyGoal = 15; (Total hours you want to study this week)
+            * const daysPlanned = 5; (Total days you plan to study this week)
+            * let daysCompleted = 3; (Days you've studied so far)
+            * let totalHoursStudied = 9.5; (Total hours you've actually studied so far)
+        3. Write calculations to find:
+            * Average Hours per Day: Divide totalHoursStudied by daysCompleted and store it in a variable named dailyAverage.
+            * Hours Remaining: Subtract totalHoursStudied from weeklyGoal and store it in a variable named hoursLeft.
+        4. Print the final results using a Template Literal (with backticks ` and ${}) so it outputs this exact message format in the browser console:
+                Dashboard for Shubham:
+                You have studied an average of X hours per day.
+                You need to study Y more hours to reach your goal of 15 hours.
+                (X and Y must be the calculated variables!)
         
-            // 2. Store your progress in a let variable (since it will change!)
-            let hoursCompleted = 8;
-        
-            // 3. Do some math to calculate remaining hours
-            let hoursRemaining = weeklyGoalHours - hoursCompleted;
-        
-            // 4. Print a combined message to the console
-            console.log("Welcome " + studentName + "! You have " + hoursRemaining + " hours left to reach your weekly goal.");
-        
-        3.Save the file and refresh your portfolio page in the browser.
-        4. Check your browser console tab at the bottom right.
+        Save the file and refresh your browser.
 -->
