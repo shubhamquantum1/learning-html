@@ -1,0 +1,1 @@
+console.log('JAVASCRIPT is successfully connected. Inspect in browser console.')
