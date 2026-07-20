@@ -1,17 +1,32 @@
-// 1. Select the title and Heading
-const mainHeading = document.querySelector("h1");
+function customizePage() {
+    // 1. Select the main heading
+    const mainHeading = document.querySelector("h1");
+    
+    // 2. Change text and styles
+    const btn = document.getElementById("theme-btn");
+    const pageBody = document.querySelector("body");
+    const pageMain = document.querySelectorAll("main p, main div");
+    console.log(pageMain.color);
+    
+    if(btn.textContent === "Light Mode") {
+        mainHeading.textContent = "Shubham's Customized Hub!";
+        mainHeading.style.color = "hsla(190, 86%, 26%, 0.75)";
+        mainHeading.style.textShadow = "0px 0px 12px rgba(150, 145, 245, 0.6)";
+        mainHeading.style.textDecoration = "underline";
 
+        pageBody.style.backgroundColor = "hsl(0, 0%, 100%)";
+        pageBody.style.color = "black";
+        pageMain.forEach(x => {x.style.color = "black"});
+        btn.textContent = "Dark Mode";        
+    } else {
+        mainHeading.textContent = "Shubham's Customized Hub!";
+        mainHeading.style.color = "hsl(150, 80%, 75%)";
+        mainHeading.style.textShadow = "0px 0px 12px rgba(0, 255, 150, 0.6)";
+        mainHeading.style.textDecoration = "underline";
 
-
-// 2. Change the text content of the h1 tag
-mainHeading.textContent = "Shubham's Developer Hub";
-
-// 3. Changing CSS Styles (element.style)
-mainHeading.style.color = "hsl(150, 80%, 75%)";
-mainHeading.style.textShadow = "0px 0px 10px rgba(0, 0, 0, 0.5)";
-mainHeading.style.fontSize = "36px";
-mainHeading.style.fontWeight = "bold";
-mainHeading.style.textDecoration = "underline";
-mainHeading.style.textAlign = "center";
-mainHeading.style.margin = "0 0 24px 0";
-mainHeading.style.padding = "0 0 36px 0";
+        pageBody.style.backgroundColor = "hsl(220, 25%, 10%)";
+        pageBody.style.color = "white";
+        pageMain.forEach(x => {x.style.color = "white"});
+        btn.textContent = "Light Mode";        
+    }
+}
