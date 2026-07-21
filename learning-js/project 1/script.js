@@ -33,26 +33,50 @@
 
 
 
-const btn = document.querySelector("#theme-btn");
+// const btn = document.querySelector("#theme-btn");
 
-btn.addEventListener("click", function() {
-    const mainHeading = document.querySelector("h1");
-    const pageBody = document.querySelector("body");
+// btn.addEventListener("click", function() {
+//     const mainHeading = document.querySelector("h1");
+//     const pageBody = document.querySelector("body");
     
-    // Always enforce the heading text value across states
-    mainHeading.textContent = "Shubham's Customized Hub!";
+//     // Always enforce the heading text value across states
+//     mainHeading.textContent = "Shubham's Customized Hub!";
 
-    if (btn.textContent === "Light Mode") {
-        // Switch to Light Mode styling
-        pageBody.classList.remove("dark-mode");
-        pageBody.classList.add("light-mode");
+//     if (btn.textContent === "Light Mode") {
+//         // Switch to Light Mode styling
+//         pageBody.classList.remove("dark-mode");
+//         pageBody.classList.add("light-mode");
         
-        btn.textContent = "Dark Mode";        
+//         btn.textContent = "Dark Mode";        
+//     } else {
+//         // Switch to Dark Mode styling
+//         pageBody.classList.remove("light-mode");
+//         pageBody.classList.add("dark-mode");
+        
+//         btn.textContent = "Light Mode";        
+//     }
+// });
+
+
+// Select the contact form
+const contactForm = document.querySelector("#contact-form");
+
+// Add an event listener ONLY if a form exists on the current page
+if (contactForm) {
+  contactForm.addEventListener("submit", function(e) {
+    e.preventDefault(); // Stop page from refreshing!
+
+    // Read the input values
+    const nameValue = document.querySelector("#name").value;
+    const emailValue = document.querySelector("#email").value;
+
+    // Check if fields are empty
+    if (nameValue === "" || emailValue === "") {
+      alert("❌ Error: Please fill in all fields before submitting!");
     } else {
-        // Switch to Dark Mode styling
-        pageBody.classList.remove("light-mode");
-        pageBody.classList.add("dark-mode");
-        
-        btn.textContent = "Light Mode";        
+        console.log(nameValue);
+        console.log(emailValue);
+        alert(`✅ Success! Thank you ${nameValue}, your message has been received.`);
     }
-});
+  });
+}
