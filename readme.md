@@ -1,34 +1,80 @@
-<!-- 🎨 Mini-Project 6: The Interactive Theme Switcher  -->
+<!-- Level 3 - Topic 1&2 — Advanced JavaScript (Event Listeners and Class Toggling)  -->
 <!-- --------------------------------------------------------------------------------- -->
 <!-- 
-    Create a theme-switching webpage where clicking a single button alters the entire look of the page. The background, heading styles, text content, and individual paragraph/div elements must adapt dynamically, and the button text must toggle appropriately.
+    Topic 1: Event Listeners (addEventListener) => In HTML, writing onclick="customizePage()" inside the tag is called an inline event. While it works, modern web standards dictate keeping HTML strictly for structure and putting all click handlers inside script.js. We do this using addEventListener:
+        >> const btn = document.querySelector("#theme-btn");
+        >> btn.addEventListener("click", customizePage);      // Listens for a click on the button and runs a function:
+
+    Topic 2: Class Toggling (classList.toggle)  => In your script.js, you manually changed 8 different .style properties (style.backgroundColor, style.color, style.textShadow, .forEach(...)). Instead of writing 15 lines of JavaScript to change individual inline styles, the industry standard is to define a class in CSS and use JavaScript to turn that class on or off with one line:
+        >> document.body.classList.toggle("light-theme");    // Toggles the 'light-theme' class on and off the <body> tag!
 
 
-    Requirements:
-    1. HTML Elements:
-        * Add a <button> with an ID of theme-btn that triggers a JavaScript function when clicked.
-    
-    2. Light Mode (When page text says "Light Mode"):
-        * Change heading text to "Shubham's Customized Hub!".
-        * Apply an underline, a soft shadow, and a dark teal/blue color to the <h1>.
-        * Set the <body> background to white.
-        * Turn all <p> and <div> tags inside <main> to black.
-        * Change the button text to "Dark Mode".
-    
-    3. Dark Mode (When page text says "Dark Mode"):
-        * Keep heading text as "Shubham's Customized Hub!".
-        * Apply an underline, a bright green glow shadow, and a light green color to the <h1>.
-        * Set the <body> background to a dark navy blue.
-        * Turn <p> tags inside <main> to white.
-        * Turn <div> tags inside <main> to #f0e7e7aa.
-        * Change the button text to "Light Mode"
+    Your Task: Let's refactor your Light/Dark Mode toggle to use addEventListener and classList.toggle!
+    1. Clean up portfolio.html: Remove onclick="customizePage()" from your <button> tag so the HTML stays 100% clean.
+    2. Add a Light Theme class in style.css: At the bottom of your style.css, add these rules:
+        /* Dynamic Light Mode Themes using Event Listeners and Class Toggling. */
+        /* ------------------------------------------------------------------------------- */
+        1. Body backgrounds and root text overrides
+        body.light-mode {
+            background-color: hsl(0, 0%, 100%) !important;
+            color: black !important;
+        }
+        2. Heading updates for Light Mode
+        body.light-mode h1 {
+            color: hsla(190, 86%, 26%, 0.75) !important;
+            text-shadow: 0px 0px 12px rgba(150, 145, 245, 0.6) !important;
+            text-decoration: underline !important;
+        }
 
-    💡 Hints for Writing the JavaScript:
-        * Hint 1 (The Trigger): Use the button's current text condition (btn.textContent === "Light Mode") as your primary if statement condition to decide whether you are switching into Light Mode or Dark Mode.
+        3. Targets specific inner block structures inside main
+        body.light-mode main p,
+        body.light-mode main div {
+            color: black !important;
+        }
+
+        /* --- Dynamic Dark Mode Themes --- */
+        /* 1. Body backgrounds and root text overrides */
+        body.dark-mode {
+            background-color: hsl(220, 25%, 10%) !important;
+            color: white !important;
+        }
+        body.dark-mode h1 {
+            color: hsl(150, 80%, 75%) !important;
+            text-shadow: 0px 0px 12px rgba(0, 255, 150, 0.6) !important;
+            text-decoration: underline !important;
+        }
+        body.dark-mode main p {
+            color: white !important;
+        }
+        body.dark-mode main div {
+            color: #f0e7e7aa !important;
+        }
+
+    3. Refactor script.js:Replace your script.js contents with this clean Event Listener:
+       const btn = document.querySelector("#theme-btn");
         
-        * Hint 2 (Targeting main elements): Since explicit color rules like p { color: ... } and h1 { color: ... } defined in your CSS, they override the color inherited from the body tag due to CSS specificity. Hence, you might need to use querySelectorAll("main p, main div") to target all <p> and <div> tags inside <main>. Remember that document.querySelectorAll() returns a NodeList (a collection of elements). You cannot style it directly using brackets like pageMain[div] or properties like pageMain.color. You must address the individual elements inside it using loops. Loop through them and change their color based on the current theme.
-        
-        * Hint 3 (Text Decorations & Shadows):
-            * For underlines: .style.textDecoration = "underline"
-            * For glows: .style.textShadow = "0px 0px 12px rgba(...)"
+        btn.addEventListener("click", function() {
+        const mainHeading = document.querySelector("h1");
+        const pageBody = document.querySelector("body");
+
+        mainHeading.textContent = "Shubham's Customized Hub!";   // Always enforce the heading text value across states
+
+        if (btn.textContent === "Light Mode") {
+            // Switch to Light Mode styling
+            pageBody.classList.remove("dark-mode");
+            pageBody.classList.add("light-mode");
+            
+            btn.textContent = "Dark Mode";        
+        } else {
+            // Switch to Dark Mode styling
+            pageBody.classList.remove("light-mode");
+            pageBody.classList.add("dark-mode");
+            
+            btn.textContent = "Light Mode";        
+        }
+        });
+
+
+    4. Save all files and test your button in the browser!
+
 -->

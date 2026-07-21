@@ -369,3 +369,51 @@ ol li {
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);    /* Glow shadow */
   }
 }
+
+
+
+
+
+
+/* Dynamic Light Mode Themes using Event Listeners and Class Toggling. */
+/* ------------------------------------------------------------------------------- */
+/* 1. Body backgrounds and root text overrides (Target body element having class light-mode or Target body element when class light-mode is activated)
+      * The !important rule overrides any standard styles defined earlier in the CSS file.
+      *  */
+body.light-mode {
+  background-color: hsl(0, 0%, 90%) !important;
+  color: black !important;
+}
+
+/* 2. Heading updates for Light Mode (Target the <h1> element inside the <body> element having class light-mode or when class light-mode is activated)*/
+body.light-mode h1{
+  color: hsla(190, 86%, 26%, 0.75) !important;
+  text-shadow: 0px 0px 12px rgba(150, 145, 245, 0.6) !important;
+  text-decoration: underline !important;
+}
+
+/* 3. Targets specific inner block structures inside main (Target both p and div elements inside the main element when the body element has the class light-mode or when class light-mode is activated)*/
+body.light-mode main p,
+body.light-mode main div {
+  color: black !important;
+}
+
+/* --- Dynamic Dark Mode Themes --- */
+/* 1. Body backgrounds and root text overrides (Target body element having class dark-mode or Target body element when class dark-mode is activated)*/
+body.dark-mode {
+  background-color: hsl(220, 25%, 10%) !important;
+  color: white !important;
+}
+/* 2. Heading updates for Dark Mode (Target the <h1> element inside the <body> element having class dark-mode or when class dark-mode is activated)*/
+body.dark-mode h1 {
+  color: hsl(150, 80%, 75%) !important;
+  text-shadow: 0px 0px 12px rgba(0, 255, 150, 0.6) !important;
+  text-decoration: underline !important;
+}
+/* 3. Targets specific inner block structures inside main (Target both p and div elements inside the main element when the body element has the class light-mode or when class light-mode is activated)*/
+body.dark-mode main p {
+  color: white !important;
+}
+body.dark-mode main div {
+  color: #f0e7e7aa !important;
+}
