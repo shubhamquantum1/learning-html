@@ -7,13 +7,15 @@
     <!--Invisible to user. Contains metadata, page title and links to CSS-->
     <head>
         <title>Survey Form</title>
-        <link rel="stylesheet" href="style.css">        
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>     
     </head>
 
     <!-- Body. Everything inside is visible to user-->
     <body>
         <header> 
-            <h1> <u> Registration & Survey Form </u> </h1> 
+            <h1> <u> Registration & Survey Form </u> </h1>
+            <button id="theme-btn">Light Mode</button> 
         </header>
 
         <nav class="nav">
@@ -29,7 +31,7 @@
         <main>
             <h2> Take Survey: </h2>
             <div class="form-container ">
-                <form>
+                <form id="survey-form">
                         <label for="name"> Full name: </label>
                         <input type="text" id="name">
 
