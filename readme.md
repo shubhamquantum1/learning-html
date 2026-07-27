@@ -1,30 +1,19 @@
-<!-- Phase 4 — Level 1: Topic 1: SEO & Metadata  -->
+<!-- Phase 4 — Level 1: Topic 2: Accessibility Audit and clean code check-->
 <!-- --------------------------------------------------------------------------------- -->
 <!-- 
-    When search engines like Google crawl the internet, they read the <head> of your HTML document to understand what your page is about.
+    Web accessibility means ensuring that everyone, including people with visual, hearing, or motor disabilities, can read and navigate your site.
 
-    To help search engines index your pages correctly (and make them look clean when shared on social media or search results), we add two key things:
-
-    1. A Unique Title: Every page must have a distinct <title> tag in its <head>.
-    2. A Meta Description: A short summary (around 150 characters) of what is on that specific page.
-        <meta name="description" content="Welcome to Shubham's portfolio website showcasing skills in IoT, ML & AI, and Robotics.">
+    We've already done most of the heavy lifting:
+    1. Semantic Elements: Using <header>, <nav>, <main>, and <footer> allows screen readers to jump directly to specific parts of your page.
+    2. Form Labels: Binding labels to inputs (for="..." matching id="...") allows screen readers to tell blind users exactly what each text box expects.
+    3. Image Alt Text: All of your images have descriptive alt="..." text so users who cannot see the images can hear descriptions of them.
 
 
     Your Task:
-    Open your HTML files in the learning-js/project 1 folder, and add a unique meta description tag inside the <head> of each page (place it directly below the <title> tag):
-
-    1. portfolio.html:
-    <meta name="description" content="Welcome to Shubham's portfolio website showcasing skills in IoT, ML & AI, and Robotics.">
-    
-    2. about.html:
-    <meta name="description" content="Learn more about Shubham's background, core values, and determination on his coding journey.">
-
-    3. hobbies.html:
-    <meta name="description" content="Explore Shubham's favorite hobbies, including reading, gaming, and studying.">
-    
-    4. contact.html:
-    <meta name="description" content="Get in touch with Shubham. Send a message directly via the contact form.">
-    
-    5. survey.html:
-    <meta name="description" content="Submit your thoughts and share your preferred coding tracks in Shubham's quick survey.">
+    1. Open all 5 HTML files in learning-js/project 1.
+    2. Locate the opening <html> tag near the top of each file.
+    3. Update it to declare English as the language:
+       >> <html lang="en">
+    4. Removing commented-out code blocks and console.log() in script.js file.
+    4. Save the files.
 -->
