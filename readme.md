@@ -1,40 +1,30 @@
-<!-- JavaScript Capstone Challenge: Interactive Web Portfolio  -->
+<!-- Phase 4 — Level 1: Topic 1: SEO & Metadata  -->
 <!-- --------------------------------------------------------------------------------- -->
 <!-- 
-    📝 Project Description
-    Take a static multi-page HTML/CSS website (consisting of a Homepage, About page, Hobbies list, Contact page, and a Survey Form) and connect it to a single external JavaScript file. Your goal is to add dynamic front-end behaviors: a global, persistent Dark/Light theme toggle switch, and a dynamic form submission processor that validates data and alters the user interface live on submit.
+    When search engines like Google crawl the internet, they read the <head> of your HTML document to understand what your page is about.
+
+    To help search engines index your pages correctly (and make them look clean when shared on social media or search results), we add two key things:
+
+    1. A Unique Title: Every page must have a distinct <title> tag in its <head>.
+    2. A Meta Description: A short summary (around 150 characters) of what is on that specific page.
+        <meta name="description" content="Welcome to Shubham's portfolio website showcasing skills in IoT, ML & AI, and Robotics.">
 
 
-    🛠️ Project Requirements
-    Task 1: Script Integration
-    * Connect a single file named script.js to the <head> of all HTML files.
-    * Ensure that the script does not block HTML rendering and only runs after the DOM is fully loaded.
+    Your Task:
+    Open your HTML files in the learning-js/project 1 folder, and add a unique meta description tag inside the <head> of each page (place it directly below the <title> tag):
+
+    1. portfolio.html:
+    <meta name="description" content="Welcome to Shubham's portfolio website showcasing skills in IoT, ML & AI, and Robotics.">
     
+    2. about.html:
+    <meta name="description" content="Learn more about Shubham's background, core values, and determination on his coding journey.">
 
-    Task 2: Global Persistent Theme Toggle
-    * Add a single button with the ID theme-btn inside the <header> or <nav> of every HTML page.
-    * Create a Light Mode theme in your CSS using a class (e.g., body.light-theme) that overrides background colors and text colors.
-    * In script.js, listen for a click on the theme button. When clicked, toggle the light-theme class on the <body> tag.
-    * The Persistence Challenge: When a user navigates from one page to another, the browser resets. Make the theme selection persistent so that the website "remembers" if the user selected Light or Dark Mode across page refreshes and link clicks.
+    3. hobbies.html:
+    <meta name="description" content="Explore Shubham's favorite hobbies, including reading, gaming, and studying.">
     
-
-    Task 3: Survey Submission Processor (survey.html)
-    * Bind a submit handler to the survey form.
-    * The Anti-Reload Constraint: Prevent the browser from refreshing the page when the submit button is clicked.
-    * Validate the form locally in JavaScript: if the Name, Email, or Password fields are empty, stop submission and display an error alert.
-    * Dynamic UI Update: If the form is valid, read the user's Name and Role dropdown choice. Completely strip the form off the page and dynamically replace its container on the screen with a styled "Thank You/Success" card using JavaScript.
+    4. contact.html:
+    <meta name="description" content="Get in touch with Shubham. Send a message directly via the contact form.">
     
-    💡 Developer Hints
-    Hint for Task 1: Script Loading
-        * Look up the difference between standard <script> tags and the defer attribute. defer ensures your script is loaded but only executed after the HTML document is fully parsed.
-        
-    Hint for Task 2: Persistence
-        * To save data that survives page changes, research localStorage.
-        * Use localStorage.setItem("key", "value") to store the active theme state.
-        * Use localStorage.getItem("key") inside a load check at the top of your script to read the user's preference and apply the correct classes immediately when the page loads.
-        
-    Hint for Task 3: Intercepting Forms & Updating DOM
-        * Forms trigger a "submit" event. Use event.preventDefault() inside your listener to stop the default browser reload action.
-        * Use the .value property on input elements (e.g. document.querySelector("#name").value) to extract what the user typed.
-        * To change the actual HTML code inside a card container, select the container and overwrite its .innerHTML property using a Template Literal backtick ( ` ) string.
+    5. survey.html:
+    <meta name="description" content="Submit your thoughts and share your preferred coding tracks in Shubham's quick survey.">
 -->
